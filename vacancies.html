@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии - Студия TRIADA</title>
+    <link rel="stylesheet" href="vacancies.css">
+
+</head>
+<body>
+<script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("vacancies.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "vacancies.html";
+            } else if (width <= 1024 && window.location.href.indexOf("vacancies_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "vacancies_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+<div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20сеанс">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+
+<!--
+ <div class="spot" id="spot1">
+    <img src="images/spot1.webp" alt="Пятно 1">
+</div>
+
+<div class="spot" id="spot2">
+    <img src="images/spot2.webp" alt="Пятно 2">
+</div>
+
+<div class="spot" id="spot3">
+    <img src="images/spot3.webp" alt="Пятно 3">
+</div>
+
+<div class="spot" id="spot4">
+    <img src="images/spot4.webp" alt="Пятно 4">
+</div>
+<div class="spot" id="spot5">
+    <img src="images/spot4.webp" alt="Пятно 5">
+</div>
+-->
+
+
+
+
+<!--<div class="large-text">Training</div>-->
+    <div style="color: gray;margin-top: 5%;margin-left:38%;font-size: 30px;">Если ты тату мастер, который хочет</div>
+      <div style="color: gray;margin-top: 0.5%;margin-left:39%;font-size: 30px;">работать в классной команде и</div>
+ <div style="color: gray;margin-top: 0.5%;margin-left:38%;font-size: 30px;">комфортных условиях,то тебе к нам!</div>
+ 
+<!--<img src="images/team.webp" width="460" height="auto">-->
+ <div class="gallery-container1" id="tattoo-gallery" style="margin-top: 40px;">
+
+        <div class="gallery">
+            <img src="images/1vac.webp" class="gallery-image" alt="Tattoo 1" onclick="openModal('images/tatt1.webp')">
+            <img src="images/2vac.webp" class="gallery-image" alt="Tattoo 2" onclick="openModal('images/tatt2.webp')">
+            <img src="images/3vac.webp" class="gallery-image" alt="Tattoo 3" onclick="openModal('images/tatt3.webp')">
+ <img src="images/4vac.webp" class="gallery-image" alt="Tattoo 4" onclick="openModal('images/tatt4.webp')">
+            <img src="images/5vac.webp" class="gallery-image" alt="Tattoo 5" onclick="openModal('images/tatt5.webp')">
+            <img src="images/6vac.webp" class="gallery-image" alt="Tattoo 6" onclick="openModal('images/tatt6.webp')">
+        </div>
+      
+    </div>
+      <img src="images/arrow.webp" class="arrow left-arrow" onclick="prevImage('tattoo-gallery')">
+        <img src="images/arrow.webp" class="arrow right-arrow" onclick="nextImage('tattoo-gallery')">
+ 
+    <div style="font-size: 25px; color: gray;margin-top: 4%;margin-left: 55%;">Также у нас есть места на аренду:</div>
+    <ul style="font-size: 25px; color: gray;margin-top: 1%;margin-left: 54%;">
+<li>на полмесяца 10 000 рублей ;</li>
+<li>на месяц 15 000 рублей</li>
+        </ul>
+    <p style="margin-top: 4%;margin-left:55%;font-size: 21px; color: gray;">Мы предоставим вам:</p>
+    <ul style="font-size: 23px; color: gray;margin-top: 2%;margin-left: 54%;">
+
+<li style="margin-bottom: 8px;">Кушетку, холдер и столик;</li>
+<li style="margin-bottom: 8px;">Одноразовые расходные материалы;</li>
+<li style="margin-bottom: 8px;">Принтер и трансферную бумагу;</li>
+<li>Также для ваших клиентов будут предоставлены<br> одноразовые тапочки, чай, кофе и конфеты.</li>
+        
+ </ul>
+    <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20узнать%20о%20вакансиях%20в%20студии%20TRIADA!" class="button"  style="margin-top: 3%;">Хочу работать с Вами!</a>
+
+
+<!--
+<div>
+    <img src="images/smoke.webp" alt="Smoke"  class="smoke">
+</div>
+-->
+
+
+ <script>
+const dropdown = document.querySelector('.dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+let timer;
+
+dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+    dropdownContent.style.display = 'block';
+});
+
+dropdown.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+dropdownContent.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+});
+
+dropdownContent.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+</script>
+    
+    <script>
+        let currentIndices = {
+            'tattoo-gallery': 0,
+        };
+
+        function showImage(galleryId, index) {
+    const galleryContainer = document.getElementById(galleryId);
+    const images = galleryContainer.querySelectorAll('.gallery-image');
+    currentIndices[galleryId] = index >= images.length ? 0 : (index < 0 ? images.length - 1 : index);
+
+    images.forEach((img, i) => {
+        if (i === currentIndices[galleryId]) {
+            img.style.display = 'block'; // Показываем текущее изображение
+            img.style.transform = 'scale(1.2)';
+            img.style.opacity = '1';
+        } else {
+            img.style.display = 'none'; // Скрываем остальные изображения
+            img.style.transform = 'scale(1)';
+            img.style.opacity = '0.5';
+        }
+    });
+}
+
+        function nextImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] + 1);
+        }
+
+        function prevImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] - 1);
+        }
+
+
+
+        // Показываем начальные изображения
+        showImage('tattoo-gallery', currentIndices['tattoo-gallery']);
+   </script>
+
+</body>
+</html>

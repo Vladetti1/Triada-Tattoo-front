@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия TRIADA</title>
+     <link rel="stylesheet" href="about.css">
+ 
+    <script>
+      function showVideo() {
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            document.querySelector('.overlay-image').style.display = 'none';
+            document.getElementById('video').play();
+            document.getElementById('back-arrow').style.display = 'block'; // Показать стрелку
+        }
+
+        function showImage() {
+            document.getElementById('video').style.display = 'none';
+            document.getElementById('image').style.display = 'block';
+            document.querySelector('.overlay-image').style.display = 'block'; // Показать overlay снова
+            document.getElementById('video').pause(); // Остановить видео
+            document.getElementById('video').currentTime = 0; // Сбросить воспроизведение видео
+            document.getElementById('back-arrow').style.display = 'none'; // Скрыть стрелку
+        }
+    </script>
+</head>
+<body>
+
+<!--<div class="smoke-background"></div>-->
+    <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20сеанс">Записаться</a>
+            </div>
+        </div>
+    </div>
+  
+
+            <div class="content">
+                 <div class="tt">
+                     <div class="sv">
+                <img id="image" src="images/house.PNG" alt="Studio Image" onclick="showVideo()">
+                      <!--<div class="large-text">About us</div>-->
+                     </div>
+                <div class="overlay-image"></div>
+                </div>
+                <video id="video" src="video/video.MP4" controls></video>
+                <div id="back-arrow" onclick="showImage()">&#8592; Назад</div> <!-- Стрелка для возврата -->
+            </div>
+            <div class="text-block">
+                <p>Каждый день мы по кирпичикам строим нашу крепость и <br>более того совместно достигаем небывалых высот. Каждый<br> здесь уникален и незаменим в своем деле.</p>
+                <p >Из обычной тату-студии превратились в творческое<br> пространство площадью 450 кв. метров в котором каждому<br> есть место для самовыражения!</p>
+                <p >Сейчас мы одна из самых лучших студий в городе а<br> констатацией этому являетесь Вы – наши клиенты. Все кто<br> выбирают нас вносят огромный вклад в наше развитие. А<br> мы делаем все чтобы Ваше время проведенное в нашем<br> пространстве было особенным.</p>
+                 
+                <div class="reasons">
+                    <h3>Почему мы?</h3>
+                    <ul>
+                        <li>Нам доверяют уже 5 лет</li>
+                        <li>Мастера с опытом более 15 лет</li>
+                        <li>Более 10 000 довольных клиентов</li>
+                        <li>Самая большая студия в России - 450 кв. метров</li>
+                        <li>Такси за наш счет</li>
+                        <li>Ресторан доставки еды прямо в студии</li>
+                    </ul>
+                </div>
+                </div>
+<!--
+<div class="spot" id="spot1">
+    <img src="images/spot9.webp" alt="Пятно 1">
+</div>
+
+<div class="spot" id="spot2">
+    <img src="images/spot10.webp" alt="Пятно 2">
+</div>
+<div class="spot" id="spot3">
+    <img src="images/spot11.webp" alt="Пятно 3">
+</div>
+-->
+                <!--<div class="large-text">About us</div>-->
+           
+  
+   
+    <script>
+    // Функция для проверки ширины экрана
+    function isMobile() {
+        return window.innerWidth <= 768; // Например, ширина экрана меньше или равна 768px
+    }
+
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    let timer; // Для десктопного скрипта
+
+    if (isMobile()) {
+        // Скрипт для мобильных устройств (при клике)
+        dropdown.addEventListener('click', () => {
+            const isDropdownVisible = dropdownContent.style.display === 'block';
+            dropdownContent.style.display = isDropdownVisible ? 'none' : 'block';
+        });
+
+        // Закрыть меню, если пользователь нажимает в любое другое место
+        document.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    } else {
+        // Скрипт для десктопных устройств (при наведении)
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+    }
+
+    // Добавляем обработчик, чтобы отслеживать изменение размера окна
+    window.addEventListener('resize', () => {
+        // Очищаем все ранее установленные обработчики событий
+        dropdown.removeEventListener('click', null);
+        dropdown.removeEventListener('mouseenter', null);
+        dropdown.removeEventListener('mouseleave', null);
+        document.removeEventListener('click', null);
+
+        // Перезапускаем скрипт для мобильного или десктопного варианта
+        if (isMobile()) {
+            dropdown.addEventListener('click', () => {
+                const isDropdownVisible = dropdownContent.style.display === 'block';
+                dropdownContent.style.display = isDropdownVisible ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!dropdown.contains(event.target)) {
+                    dropdownContent.style.display = 'none';
+                }
+            });
+        } else {
+            dropdown.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+                dropdownContent.style.display = 'block';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+                timer = setTimeout(() => {
+                    dropdownContent.style.display = 'none';
+                }, 500);
+            });
+
+            dropdownContent.addEventListener('mouseenter', () => {
+                clearTimeout(timer);
+            });
+
+            dropdownContent.addEventListener('mouseleave', () => {
+                timer = setTimeout(() => {
+                    dropdownContent.style.display = 'none';
+                }, 500);
+            });
+        }
+    });
+</script>
+    
+    
+    
+    
+<!--<script>
+// Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+</script> -->
+</body>
+</html>

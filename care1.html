@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уход - Студия TRIADA</title>
+    <link rel="stylesheet" href="care1.css">
+
+</head>
+
+<body>
+<!--
+   <div class="back">
+       <img src="images/sss.webp" alt="back">
+    </div>
+-->
+    
+    <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+         <div class="contacts">
+            <div class="dropdown">
+                <span style="color:black;">Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="title">Уход за тату</h2>
+        <div class="text-container">
+            <div class="text-block">
+                <p class="section-title">Самостоятельный уход</p>
+                <p class="additional-text">1. По приходу домой промойте тату мыльной водой</p>
+                <p class="additional-text">и протрите безворсовой салфеткой.</p>
+                <p class="additional-text">2. Намажьте тату мазью, в составе которой есть пантенол.</p>
+                <p class="additional-text">3. Закройте тату одноразовой пеленкой.</p>
+                <p class="additional-text">4. Повторяйте процедуру 3-4 раза в день в течение двух дней, используя
+                    пеленку. И ещё неделю, используя только мазь.</p>
+            </div>
+            <div class="text-block">
+                <p class="section-title">С помощью заживляющей пленки</p>
+                <p class="additional-text">1. С пленкой необходимо ходить 5-6 дней. В это время под ней может
+                    скапливаться сукровица. Это нормально!</p>
+                <p class="additional-text">2. Снимите пленку, размочив под ней клей теплой водой. Промойте тату мыльной
+                    водой и протрите безворсовой салфеткой.</p>
+                <p class="additional-text">3. Увлажняйте тату мазью 3-4 раза в день в течение недели, используя мазь с
+                    пантенолом.</p>
+            </div>
+        </div>
+    </div>
+
+ 
+    
+        <img src="images/sh2.webp" alt="Healing image" class="healing-img">
+   
+
+
+
+    <script>
+        // Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+    </script>
+
+
+</body>
+
+</html>

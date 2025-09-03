@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочный сертификат - Студия TRIADA</title>
+    <link rel="stylesheet" href="certificates_mob.css">
+
+</head>
+<body>
+     <script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("certificates.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "certificates.html";
+            } else if (width <= 1024 && window.location.href.indexOf("certificates_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "certificates_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+
+<div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--<div class="background-container"></div>-->
+<div class="content">
+
+<!--
+<div class="spot" id="spot1">
+    <img src="images/spot5.webp" alt="Пятно 1">
+</div>
+
+<div class="spot" id="spot2">
+    <img src="images/spot6.webp" alt="Пятно 2">
+</div>
+-->
+    
+    <p style="font-size: 30px; margin-bottom: 25px; padding-left: 1%; color:gray;">В нашем салоне вы можете приобрести<br> подарочный сертификат номиналом:</p>
+
+    <div class="gift-options" style=" padding-left: 1%;">
+        <div class="gift-option">
+            <p>2 000 Рублей</p>
+        </div>
+        <div class="gift-option">
+            <p>3 000 Рублей</п>
+        </div>
+        <div class="gift-option">
+            <p>5 000 Рублей</п>
+        </div>
+        <div class="gift-option">
+            <p>10 000 Рублей</п>
+        </div>
+        <div class="gift-option">
+            <p>15 000 Рублей</п>
+        </div>
+    </div>
+<div class="text">
+<p style="font-size: 25px; padding-left: 1%; color:gray;">Для вашего удобства у нас существуют<br> виртуальные и физические подарочные карты. </p>
+<p style="font-size: 25px; padding-left: 1%;color:gray;">Номиналом от 5 000 рублей доставка осуществляется нами!</p>
+</div>
+
+<!--<div class="large-text">Certificate</div>-->
+
+<div class="image-container">
+        <img src="images/certs.webp" alt="First Image" class="image1">
+        
+    </div>
+    
+</div>
+ <div class="menu1">
+<a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20приобрести%20подарочный%20сертификат!" class="button">Купить подарочный сертификат</a>
+</div>
+<!--
+<div>
+    <img src="images/smoke2.webp" alt="Smoke"  class="smoke">
+</div>
+-->
+<!--<div class="menu">
+
+    <a href="index.html" class="button">На главную</a>
+</div>-->
+
+<script>// Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+</script>
+
+</body>
+</html>

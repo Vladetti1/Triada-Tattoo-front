@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Load</title>
+</head>
+<body>
+    <div id="content">Loading...</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Load</title>
+    <script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("consultation.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "consultation.html";
+            } else if (width <= 1024 && window.location.href.indexOf("consultation_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "consultation_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+</head>
+<body>
+    <div id="content">Loading...</div>
+</body>
+</html>
+
+</body>
+</html>

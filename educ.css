@@ -1,0 +1,524 @@
+
+
+.wrap {
+    text-align: center; /* Центрирует заголовок по горизонтали */
+    position: relative; /* Для относительного позиционирования */
+}
+
+.carousel {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    gap: -6px; /* Задаем отступы между элементами */
+    margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+.carousel-item {
+    text-align: center; /* Центрируем текст под изображениями */
+      width: 200px;
+            height: 200px;
+    margin: 0 -15px; /* Уменьшаем расстояние с помощью отрицательных отступов */
+}
+
+
+.phone {
+    text-align: center; /* Центрирует заголовок по горизонтали */
+    position: relative; /* Для относительного позиционирования */
+   
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    gap: -6px; /* Задаем отступы между элементами */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    z-index: -10;
+}
+
+
+
+
+
+
+   .gallery-container {
+            position: relative;
+           width: 45%; /* Занять всю доступную ширину */
+    height: auto; /* Автоматическая высота */
+            overflow: hidden;
+ margin-bottom: 50px;
+margin-left: 28%; /* Сдвигаем вправо на 20% */
+
+           
+          
+        }
+        .gallery {
+            display: flex;
+            transition: transform 0.5s ease;
+            margin-left: -50px;
+      
+ 
+        }
+        .gallery-image {
+            min-width: calc(100% / 3);
+            transition: transform 0.5s ease;
+   z-index: 10;
+            cursor: pointer;
+        }
+        .gallery-image:not(:nth-child(2)) {
+            opacity: 0.5;
+ z-index: -10;
+        }
+        .gallery-image:nth-child(2) {
+/*            transform: scale(1.2);*/
+ z-index: 10;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+
+        }
+        .left-arrow {
+            left: 50px;
+
+        }
+        .right-arrow {
+            right: 100px;
+ transform: rotate(180deg);
+top: 3%;
+
+        }
+
+ .right-arrow1 {
+            right: 100px;
+ transform: rotate(180deg);
+top: 26%;
+
+        }
+
+ .right-arrow2 {
+            right: 100px;
+ transform: rotate(180deg);
+top: 86px;
+ 
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            max-width: 400px;
+            max-height: 400px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    width: 200px; 
+    height: auto;
+    z-index: 9;
+}
+
+.arrow-prev {
+    left: 30%;
+    top: 45%;
+    transform: translateY(-50%) ; /* повернуть стрелку налево */
+
+}
+
+.arrow-next {
+    right: 30%;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+
+}
+
+
+
+
+
+
+
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+
+
+
+
+.price-table {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+
+
+
+
+.contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -30px; 
+            transform: translateX(-25vw);
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 1500px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .contacts .adress a,
+        .contacts .zap a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+@media (min-width: 2530px){
+    
+    .contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -30px; 
+            transform: translateX(21vw);
+        font-size: 34px;
+        
+   
+        
+   
+        
+}
+        .right-arrow1 {
+            right: 100px;
+ transform: rotate(180deg);
+top: 36%;
+
+        }
+    
+    
+}
+
+
+
+
+
+        body {
+               font-family: 'ExyleC';
+            background: #1c1c1c; 
+            color: black;
+            margin: 0;
+            padding: 0px;
+            overflow-x: hidden;
+
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #808080;
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+            padding-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            color: #000;
+font-family: 'ExyleC';
+ font-size: 25px;
+        }
+
+        .header img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .header .contact1 {
+            margin-left: auto;
+            
+        }
+
+        .header .contact1 a {
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 3px;
+   
+        }
+
+        .header .contact1 a.tel {
+            display: block;
+            margin-bottom: 5px;
+   
+        }
+
+        .header .contact1 a:not(.tel) {
+            display: inline-block;
+            margin-right: 10px;
+           
+        }
+
+        .header .adress a,
+        .header .zap a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 10px;
+    
+        }
+
+        .header .adress {
+            margin-left: 5px;
+          
+
+        }
+
+        .header .zap {
+            margin-left: 5px;
+ transform: translateX(-5px);
+        }
+
+        .small-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+        main {
+            padding: 20px;
+            margin-top: 60px; /* Отступ для хедера */
+        }
+
+      
+
+        h2 {
+            font-size: 36px;
+            color: #00CBB0;
+            text-align: center;
+        }
+
+         .carousel1 {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+   color: black;
+        }
+
+        .carousel img, .carousel1 img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .button, .button-prev, .button-next {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #00CBB0;
+            background: #111;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            transition: color 0.3s;
+border: 2px solid #00CBB0; /* Бирюзовая граница */
+        }
+
+        .button:hover:before, .button-prev:hover:before, .button-next:hover:before {
+            opacity: 1;
+        }
+
+        .button-prev, .button-next {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            bottom: 20px;
+        }
+
+        .button-prev {
+            left: 50px;
+        }
+
+        .button-next {
+            right: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        .button:before, .button-prev:before, .button-next:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+            filter: blur(5px);
+            z-index: -1;
+            border-radius: 10px;
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+
+.carousel1-container {
+            position: relative;
+            width: 90%;
+            margin: 0 auto;
+            perspective: 1000px;
+overflow: hidden;
+   color: black;
+        }
+
+        .carousel1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+overflow: hidden; 
+   color: black;
+  
+        }
+
+        .carousel1 img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 1s;
+            transform-origin: center center;
+            opacity: 0.5;
+   color: black;
+        }
+
+        .carousel1 img.active {
+            transform: scale(1.2);
+            opacity: 1;
+            z-index: 0;
+        }
+
+        .carousel1 img.prev, .carousel1 img.next {
+            transform: scale(0.8) rotateY(45deg);
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        .carousel1 img.hidden {
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .button-prev, .button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 9;
+
+        }
+
+        .button-prev {
+            left: 10px;
+        }
+
+        .button-next {
+            right: 10px; 
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+
+
+
+

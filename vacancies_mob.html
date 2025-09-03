@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии - Студия TRIADA</title>
+    <link rel="stylesheet" href="vacancies_mob.css">
+
+</head>
+<body>
+ <script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("vacancies.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "vacancies.html";
+            } else if (width <= 1024 && window.location.href.indexOf("vacancies_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "vacancies_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+<div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<div class="content">
+
+
+
+
+
+
+    <h2 style="color: gray;">Если ты тату мастер, который<br>
+ хочет работать в классной <br>
+команде и комфортных условиях,<br>
+ то тебе к нам!</h2>
+<img src="images/team.webp">
+ 
+    <p style="font-size: 21px; color: gray;">Также у нас есть места на аренду:<br>
+на полмесяца 10 000 рублей;<br>
+на месяц 15 000 рублей<br></p>
+<p style="font-size: 21px; color: gray;">Мы предоставим вам:</p>
+<p style="font-size: 21px; color: gray;">Кушетку, холдер и столик;</p>
+<p style="font-size: 21px; color: gray;">Одноразовые расходные материалы;</p>
+<p style="font-size: 21px; color: gray;">Принтер и трансферную бумагу;</p>
+<p style="font-size: 21px; color: gray;">Также для ваших клиентов будут<br> предоставлены одноразовые <br>тапочки, чай, кофе и конфеты.</p>
+
+    <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20узнать%20о%20вакансиях%20в%20студии%20TRIADA!" class="button">Хочу работать с Вами!</a>
+</div>
+
+<!--
+<div>
+    <img src="images/smoke.webp" alt="Smoke"  class="smoke">
+</div>
+-->
+
+
+ <script>
+const dropdown = document.querySelector('.dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+let timer;
+
+dropdown.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+    dropdownContent.style.display = 'block';
+});
+
+dropdown.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+dropdownContent.addEventListener('mouseenter', () => {
+    clearTimeout(timer);
+});
+
+dropdownContent.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        dropdownContent.style.display = 'none';
+    }, 500);
+});
+
+</script>
+
+</body>
+</html>

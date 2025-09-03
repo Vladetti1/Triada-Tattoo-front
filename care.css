@@ -1,0 +1,449 @@
+
+@media screen and (max-width: 480px) {
+    
+    .content{
+       
+    }
+  
+    @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+ 
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #808080;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Центрируем все элементы */
+        padding-left: 8px;
+        padding-right: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        color: #000;
+        font-family: 'ExyleC';
+        font-size: 50px; /* Уменьшаем шрифт для мобильных */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header img {
+
+        margin-right: 10px; /* Добавляем небольшой отступ справа */
+      transform: translateX(-25%); /* Сдвигаем влево */
+        width: 50%;
+    }
+
+    .header .contact1 {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание */
+        margin-left: 0;
+        align-items: center; /* Центрируем контактные данные */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .header .contact1 a {
+        margin: 2px 0; /* Уменьшаем отступы между ссылками */
+        color: #000;
+        
+    }
+
+    .header .adress,
+    .header .zap {
+        display: none;
+        margin-left: 12%;
+        text-align: center; /* Центрируем текст */
+    }
+
+    .small-logo {
+        top: 10px;
+        left: 50%; /* Центрируем логотип */
+        transform: translateX(-50%); /* Смещаем его ровно в центр */
+        width: 30px; /* Уменьшаем размер логотипа */
+    }
+    
+    
+    
+  .contacts {
+        display: flex;
+        flex-direction:row; /* Вертикальное выравнивание */
+        align-items: center;    /* Центрируем элементы */
+        margin-top: 0px;
+      font-size: 30px;
+      transform: translateX(50%);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto; /* Центрируем dropdown */
+        width: 100%;
+        transform: translateX(-32%); /* Сдвиг влево на 30% */
+    }
+
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 3px;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 3px;
+        transform: translateX(0%);
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 15px; /* Уменьшаем отступы для удобства на мобильных */
+        text-align: center; /* Центрируем текст внутри ссылок */
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Цвет фона при наведении */
+    }
+
+    .contacts .adress a,
+    .contacts .zap a {
+        color: #000000;
+        text-decoration: none;
+        margin: 5px 0; /* Отступы между элементами */
+        text-align: center; /* Центрируем ссылки */
+        display: block; /* Блоковые элементы для вертикального отображения */
+    }
+    
+    
+    
+    
+    
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+@media (min-width: 1024px) {
+
+
+
+        
+.spot {
+    position: absolute;
+    z-index: -10; 
+}
+
+#spot1 {
+    top: -85%; 
+    left: -88%;
+transform: scale(0.3);
+
+}
+
+#spot2 {
+    top: -100%; 
+    left: -76%;
+transform: scale(0.35);
+}
+
+#spot3 {
+    top: -91%; 
+    left: -76%;
+transform: scale(0.3);
+}
+
+
+
+.large-text {
+    font-family: 'Virginia';
+    font-size: 5vw;
+    color:  #00CBB0; 
+position: absolute;
+   
+    top: 85%; 
+    right: 20vw; 
+    transform: rotate(90deg); 
+  
+    z-index: 5; 
+    transform: translateY(-50%) rotate(270deg); 
+
+
+}
+
+.additional-text {
+    margin-top: 5px; 
+    font-size: 0.9em;
+}
+
+
+.text-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    gap: 200px; 
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.text-container p {
+    margin: 0; 
+}
+
+
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+
+
+
+
+.contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -30px; 
+       transform: translateX(-25vw);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 1500px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .contacts .adress a,
+        .contacts .zap a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+
+
+
+        body {
+         font-family: 'ExyleC';
+            background: #1c1c1c;
+            color: #fff;
+            margin: 0;
+            padding: 0px;
+        
+            overflow-x: hidden;
+        
+   margin: 0;
+    padding: 0;
+/*
+    background-image: url('images/sss.webp');
+            background-size: 99vw 170vh; 
+*/
+
+    background-position: center; 
+    background-repeat: no-repeat; /* Чтобы фон не повторялся */
+        }
+        .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    color: #000;
+    border-top: none; 
+    border-left: none; 
+font-family: 'ExyleC';
+font-size: 25px;
+}
+        .header img {
+            height: 40px;
+            margin-left: 10px;
+        }
+        .header .contact1 {
+            margin-left: auto;
+        }
+        .header .contact1 a {
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 3px;
+        }
+        .header .contact1 a.tel {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .header .contact1 a:not(.tel) {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .header .adress a,
+        .header .zap a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .header .adress {
+            margin-left: 5px;
+   
+        }
+        .header .zap {
+            margin-left: 5px;
+            transform: translateX(-5px);
+        }
+        .small-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+        .content {
+            text-align: center;
+            margin-top: 80px; 
+        }
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 40px;
+        }
+        @media (min-width: 2530px){
+    
+    .contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -30px; 
+            transform: translateX(21vw);
+        font-size: 34px;
+        
+    }
+}
+        .menu a {
+            text-decoration: none;
+            color:  #00CBB0;
+            font-size: 24px;
+            margin: 10px 0;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #111;
+            border-radius: 10px;
+            position: relative;
+            transition: color 0.3s;
+            width: auto; 
+        }
+        .menu a:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+            filter: blur(5px);
+            z-index: -1;
+            border-radius: 10px;
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+        .menu a:hover:before {
+            opacity: 1;
+        }
+        .menu a:active {
+            color: #000;
+        }
+        .menu a:active:after {
+            background: transparent;
+        }
+        .menu a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+}

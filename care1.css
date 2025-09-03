@@ -1,0 +1,582 @@
+/* Основные стили */
+
+/*
+.back{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/sss.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: -1; 
+    filter: brightness(1.2) contrast(1.2); 
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #808080;
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+            padding-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            color: #000;
+font-family: 'ExyleC';
+ font-size: 25px;
+        }
+
+        .header img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .header .contact1 {
+            margin-left: auto;
+            
+        }
+
+        .header .contact1 a {
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 3px;
+   
+        }
+
+        .header .contact1 a.tel {
+            display: block;
+            margin-bottom: 5px;
+   
+        }
+
+        .header .contact1 a:not(.tel) {
+            display: inline-block;
+            margin-right: 10px;
+           
+        }
+
+
+        .small-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+        main {
+            padding: 20px;
+            margin-top: 60px; /* Отступ для хедера */
+        }
+
+      
+
+        h2 {
+            font-size: 36px;
+            color: #00cccc;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+
+
+        .dropdown {
+            position: fixed;
+            display: inline-block;
+            margin-left: 160%;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+
+
+.contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            
+            transform: translateX(0);
+        }
+
+
+
+@media (min-width: 320px) {
+    .contacts {
+        transform: translateX(13vw); /* Сдвиг для экрана от 320px */
+    }
+}
+
+@media (min-width: 375px) {
+    .contacts {
+        transform: translateX(100px); /* Сдвиг для экрана от 375px */
+    }
+}
+
+@media (min-width: 425px) {
+    .contacts {
+        transform: translateX(153px); /* Сдвиг для экрана от 425px */
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        transform: translateX(490px); /* Сдвиг для экрана от 768px */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+
+ .spot{
+        display:none;
+    }
+
+
+body {
+    font-family: 'ExyleC';
+    background-color: #1c1c1c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Дополнительные стили для toggle-кнопки */
+.toggle-contacts {
+    background-color: transparent;
+    border: none;
+    color: #00cccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+.title {
+    font-size: 60px;
+    color: gray;
+    text-align: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-block {
+    width: 48%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 26px;
+    color: #00cccc;
+    margin-left: 90px;
+}
+
+.additional-text {
+    font-size: 23px;
+    color: gray;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+
+.care-container {
+    display: flex;
+    align-items: flex-end;
+    /* Выравниваем текст и изображение по нижнему краю */
+    justify-content: flex-end;
+    /* Выравниваем содержимое по правому краю */
+    position: relative;
+    /* Позиционирование для вложенных элементов */
+}
+
+.healing-img {
+    width: 330px;
+    height: auto;
+    z-index: -10;
+    margin-left: 20px;
+    /* Отступ между текстом и изображением */
+}
+
+/* Стили для текста "Care" */
+.large-text {
+    font-size: 48px;
+    color: #00CBB0;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+    margin-bottom: 20px;
+    z-index: 1;
+    /* Повышаем z-index, чтобы текст был поверх изображения */
+}
+
+
+
+
+/* Адаптивные стили для мобильных устройств */
+@media (min-width: 319px) and (max-width: 480px) {
+    
+        @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+    
+    
+    .spot{
+        display:none;
+    }
+    
+    
+
+   
+
+
+    
+    
+    
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-block {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .additional-text {
+        font-size: 18px;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .care-container {
+        flex-direction: column;
+        /* Изменяем направление на вертикальное */
+        align-items: center;
+        /* Центрируем элементы по горизонтали */
+        justify-content: center;
+        /* Центрируем элементы по вертикали */
+    }
+
+    .healing-img {
+        width: 100%;
+        /* Изображение растягивается на всю ширину */
+        margin-top: 20px;
+        /* Увеличиваем отступ сверху для мобильных */
+    }
+
+    .large-text {
+        font-size: 32px;
+        /* Меньший размер текста на мобильных */
+        transform: rotate(0deg);
+        /* Убираем поворот текста на мобильных */
+        margin: 0;
+        /* Убираем отступы на мобильных */
+        text-align: center;
+        /* Центрируем текст */
+    }
+}
+
+
+
+
+
+
+
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 540px) {
+    
+        @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+    
+    
+    .spot{
+        display:none;
+    }
+    
+    
+ 
+
+
+    
+    
+    
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-block {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .additional-text {
+        font-size: 18px;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .care-container {
+        flex-direction: column;
+        /* Изменяем направление на вертикальное */
+        align-items: center;
+        /* Центрируем элементы по горизонтали */
+        justify-content: center;
+        /* Центрируем элементы по вертикали */
+    }
+
+    .healing-img {
+        width: 100%;
+        /* Изображение растягивается на всю ширину */
+        margin-top: 20px;
+        /* Увеличиваем отступ сверху для мобильных */
+    }
+
+    .large-text {
+        font-size: 32px;
+        /* Меньший размер текста на мобильных */
+        transform: rotate(0deg);
+        /* Убираем поворот текста на мобильных */
+        margin: 0;
+        /* Убираем отступы на мобильных */
+        text-align: center;
+        /* Центрируем текст */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 800px) {
+    
+        @font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+    
+    
+   
+
+
+    .content {
+        margin-left: 0;
+        padding: 15px; /* Немного увеличиваем padding для лучшей читабельности */
+    }
+
+    .title {
+        font-size: 36px; /* Немного уменьшаем заголовок для планшетов */
+        text-align: center;
+    }
+
+    .text-block {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        margin-left: 0;
+        font-size: 22px; /* Оптимальный размер заголовков для планшетов */
+        text-align: center;
+    }
+
+    .additional-text {
+        font-size: 16px; /* Уменьшаем текст для планшетов */
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .care-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .healing-img {
+        width: 35%; /* Изображение больше для планшетов */
+        padding-left: 30%;
+    }
+
+    .large-text {
+        font-size: 28px; /* Уменьшаем текст для планшетов */
+        transform: rotate(0deg);
+        margin: 0;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,482 @@
+
+@font-face {
+            font-family: 'ExyleC';
+            src: url('exylec.otf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Copperplate';
+            src: url('copperplate.otf') format('truetype');
+        }
+
+
+@font-face {
+            font-family: 'Virginia';
+            src: url('Virginia.ttf') format('truetype');
+        }
+
+
+.video1 {
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    height: 100vh; /* Задает высоту блока на весь экран */
+}
+
+#animation {
+ position: absolute;
+    top: 47%;
+    left: 51%;
+    transform: translate(-50%, -50%); /* Центрирует видео по обеим осям */
+    width: 129%; /* Регулируйте размер по ширине */
+    height: auto; /* Сохраняет пропорции видео */
+    z-index: -1; /* Отправляет видео назад, за другие элементы */
+  pointer-events: none; /* Отключает возможность взаимодействия с видео */
+    opacity: 0.5;
+}
+
+
+/*
+.help{
+    top:53%;
+    left:21%;
+    font-size:29px;
+}
+*/
+
+
+.sound-button {
+    position: fixed; /* Меняем с absolute на fixed */
+    top: 20px; /* Установите нужное значение, чтобы она была выше видео */
+    right: 30px; /* Установите нужное значение для отступа справа */
+    padding: 10px;
+    background: rgba(0, 255, 204, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    z-index: 1001; /* Обязательно оставить высокое значение z-index */
+}
+
+.sound-button:hover {
+    background-color: rgba(0, 255, 204, 1);
+}
+
+
+.video-intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            z-index: 1000;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #intro-video {
+            width: 96%;
+            height: 99%;
+            object-fit: cover; /* Обрезает видео под экран */
+        }
+
+        /* Стили для кнопки "Пропустить" */
+        .skip-button {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: rgba(0, 255, 204, 0.8);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1001;
+        }
+
+        .skip-button:hover {
+            background-color: rgba(0, 255, 204, 1);
+            transform: scale(1.05);
+        }
+
+
+
+  /* Скрытие видео */
+        .video-intro.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+
+
+.contacts {
+            display: flex;
+            align-items: center;
+            position: relative;
+            
+            transform: translateX(0);
+        }
+
+
+
+@media (min-width: 320px) {
+    .contacts {
+        transform: translateX(15vw); /* Сдвиг для экрана от 320px */
+    }
+}
+
+@media (min-width: 375px) {
+    .contacts {
+        transform: translateX(27vw); /* Сдвиг для экрана от 375px */
+    }
+}
+
+@media (min-width: 425px) {
+    .contacts {
+        transform: translateX(35vw); /* Сдвиг для экрана от 425px */
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts {
+        transform: translateX(64vw); /* Сдвиг для экрана от 768px */
+    }
+}
+
+
+
+
+        .dropdown {
+            position: fixed;
+            display: inline-block;
+            margin-left: 160%;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000; 
+            min-width: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+
+        
+
+
+
+      .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #808080;
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+            padding-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            color: #000;
+font-family: 'ExyleC';
+ font-size: 25px;
+            left: 0;
+        }
+
+        .header img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .header .contact1 {
+            margin-left: auto;
+            
+        }
+
+        .header .contact1 a {
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 3px;
+   
+        }
+
+        .header .contact1 a.tel {
+            display: block;
+            margin-bottom: 5px;
+   
+        }
+
+        .header .contact1 a:not(.tel) {
+            display: inline-block;
+            margin-right: 10px;
+           
+        }
+
+
+        .small-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+
+
+
+
+
+        body {
+               font-family:  'ExyleC';
+            background: #1f1f1f; 
+            color: #fff;
+            overflow-y: auto; /* Обеспечивает вертикальную прокрутку */
+            
+
+        }
+
+     .glow-care {
+    width: 50%;
+    height: 5%;
+    border: none;
+    outline: none;
+    color: #00CBB0; /* Бирюзовый цвет текста */
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 14px;
+       border: 2px solid #00CBB0; /* Бирюзовая окантовка */
+    text-decoration: none; /* Убирает подчеркивание текста */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Запрещает перенос текста */
+}
+
+.cons{
+    width: 39%;
+    height: 4%;
+    border: none;
+    outline: none;
+    color: #00CBB0; /* Бирюзовый цвет текста */
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 14px;
+       border: 2px solid #00CBB0; /* Бирюзовая окантовка */
+    text-decoration: none; /* Убирает подчеркивание текста */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Запрещает перенос текста */
+}
+
+.cert{
+   width: 62%;
+    height: 6%;
+    border: none;
+    outline: none;
+    color: #00CBB0; /* Бирюзовый цвет текста */
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 14px;
+       border: 2px solid #00CBB0; /* Бирюзовая окантовка */
+    text-decoration: none; /* Убирает подчеркивание текста */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+.glow-on-hover {
+    width: 39%;
+    height: 4%;
+    border: none;
+    outline: none;
+    color: #00CBB0; /* Бирюзовый цвет текста */
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    z-index: 0;
+    border-radius: 14px;
+       border: 2px solid #00CBB0; /* Бирюзовая окантовка */
+    text-decoration: none; /* Убирает подчеркивание текста */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Запрещает перенос текста */
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+.glow-care:before {
+    content: '';
+    background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-care:hover:before {
+    opacity: 1;
+}
+
+.glow-care:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+.cons:before {
+    content: '';
+    background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.cons:hover:before {
+    opacity: 1;
+}
+
+.cons:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+
+.cert:before {
+    content: '';
+    background: linear-gradient(45deg, #00ffff, #00ffd5, #00bfff, #007fff, #00bfff, #00ffd5, #00ffff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.cert:hover:before {
+    opacity: 1;
+}
+
+.cert:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+

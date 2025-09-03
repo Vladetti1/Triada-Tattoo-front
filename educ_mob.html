@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тату школа</title>
+    <link rel="stylesheet" href="educ_mob.css">
+</head>
+<body>
+ <script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("educ.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "educ.html";
+            } else if (width <= 1024 && window.location.href.indexOf("educ_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "educ_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+<!--
+
+<div class="spot" id="spot4">
+<img src="images/IMG1.webp" alt="Пятно 4">
+</div>
+
+
+<div class="spot" id="spot9">
+<img src="images/99999.webp" alt="Пятно 9">
+</div>
+<div class="spot" id="spot10">
+<img src="images/101010.webp" alt="Пятно 10">
+</div>
+-->
+
+<!--
+<div class="spot" id="spot4">
+<img src="images/IMG1.webp" alt="Пятно 4">
+</div>
+-->
+
+
+    <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+                 
+            <div class="educ_name">Обучение</div>
+       
+
+    <div class="item-1">
+        <img src="images/1ee_11zon.webp" alt="Фото 1">
+        <img src="images/oval.webp" class="responsive-img" style=" position: absolute; z-index: -10;left:35.5%;top:3%;transform: scale(2.0);">
+        <p>Теория</p>
+    </div>
+    
+    <div class="item arrow-1">
+        <img src="images/arrow.webp" alt="Arrow">
+    </div>
+    <div class="item-2">
+        <img src="images/2e_11zon.webp" alt="Фото 2">
+          <img src="images/oval.webp" class="responsive-img" style=" position: absolute; z-index: -10;left:35.5%;top:3%;transform: scale(2.0);">
+        <p>Отработка на<br> искусственной коже</p>
+    </div>
+
+    <div class="item arrow-2">
+        <img src="images/arrow.webp" alt="Arrow">
+    </div>
+    
+    
+
+    <div class="item-3">
+        <img src="images/3e_11zon.webp" alt="Фото 3">
+          <img src="images/oval.webp" class="responsive-img" style=" position: absolute; z-index: -10;left:35.5%;top:3%;transform: scale(2.0);">
+        <p>Отработка навыков<br> на моделях</p>
+    </div>
+    
+    
+    
+
+    <div class="item arrow-3">
+        <img src="images/arrow.webp" alt="Arrow">
+    </div>
+
+    
+    
+
+    <div class=" item-4">
+        <img src="images/4ee_11zon.webp" alt="Фото 4">
+          <img src="images/oval.webp" class="responsive-img" style=" position: absolute; z-index: -10;left:35.5%;top:3%;transform: scale(2.0);">
+        <p>Сертификат</p>
+    </div>
+
+
+
+<!--
+<button class="button" onclick="toggleDetails()">Подробнее об обучении</button>
+<div class="details hidden" style=" color: black; ">
+           <p >Обучение длится 4 дня и включает в себя теоретическую и практическую части. А также для Вашего удобства бывает, как индивидуальным, так и групповым.</p>
+<ul>
+<li>В первый день Вас знакомят с теорией, показывают тату оборудование и его устройство, а также рассказывают обо всех нюансах, которые необходимо знать тату мастеру.</li>
+<li>Во второй день Вам предоставляется искусственная кожа, где старший мастер поставит Вам руку и научит управлять тату оборудованием.</li>
+<li>В третий и четвертый день Вас ждут экзамены в виде демонстрации своих навыков на модели.</li>
+</ul>
+<p >Во время обучения мы предоставляем Вам все необходимое оборудование и расходные материалы.</p>
+<p >По завершению курса Вам будет присвоен сертификат о прохождении базового обучения «Теория и практика художественной татуировки»</p>
+<p >А самые талантливые ученики получают возможность работать в нашей команде.</p>
+<p >График занятий составляется совместно с Вами, поэтому совмещать с другим видом деятельности получится! Пишите нам, чтобы выбрать наиболее удобный формат обучения для Вас и начать освоение новой профессии!</p>
+</div>
+-->
+
+        
+
+<!--
+            <h2 style="font-size: 60px; margin-top: 150px; color: gray;">Выпускники тату-школы</h2>
+        <div class="gallery-container"  id="piercing-gallery">
+        <div class="gallery">
+            <img src="images/1c.webp" class="gallery-image" alt="Piercing 1" onclick="openModal('images/1c.webp')">
+            <img src="images/2c.webp" class="gallery-image" alt="Piercing 2" onclick="openModal('images/2c.webp')">
+            <img src="images/3c.webp" class="gallery-image" alt="Piercing 3" onclick="openModal('images/3c.webp')">
+    <img src="images/4c.webp" class="gallery-image" alt="Piercing 4" onclick="openModal('images/4c.webp')">
+            <img src="images/5c.webp" class="gallery-image" alt="Piercing 5" onclick="openModal('images/5c.webp')">
+          
+
+        </div>
+        <img src="images/arrow.webp" class="arrow left-arrow" onclick="prevImage('piercing-gallery')">
+        <img src="images/arrow.webp" class="arrow right-arrow1" onclick="nextImage('piercing-gallery')">
+    </div>
+    
+    
+-->
+    
+    
+      <!--      <div class="carousel1-container">
+                <div class="carousel1">
+                    <img src="images/1c.webp" alt="Фото 1">
+                    <img src="images/2c.webp" alt="Фото 2">
+                    <img src="images/3c.webp" alt="Фото 3">
+                    <img src="images/4c.webp" alt="Фото 4">
+                    <img src="images/5c.webp" alt="Фото 5">
+                </div>
+               <img src="images/arrow.webp" class="arrow arrow-prev" onclick="prevSlide()">
+            <img src="images/arrow.webp" class="arrow arrow-next" onclick="nextSlide()">
+            </div> -->
+        
+
+
+        <div class="section">
+            <h2 style="font-size: 24px; margin-top: 150px; color: gray;">Стоимость обучения</h2>
+            <div class="price-table">
+                <div>
+ <p class="description" style="font-size: 18px; color: #00cccc;">Индивидуальное</p>
+                    <p class="price" style=" position: relative; font-size: 18px;  color: #00cccc;">30 000 рублей</p>
+                  
+                </div>
+                <div>
+<p class="description" style=" position: relative; font-size: 18px; left: -2px; color: #00cccc;">Групповое</p>
+                    <p class="price" style="font-size: 18px; color: #00cccc;">25 000 рублей</p>
+                   
+                </div>
+            </div>
+            <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20обучение">
+            <button class="button" style="left: -1%; top:100% ;z-index: 10;">Записаться на обучение</button>
+                </a>
+        </div>
+
+-->
+     <!-- Модальное окно -->
+<!--
+    <div id="myModal" class="modal" style="z-index: 100;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+        </div>
+    </div>
+    
+-->
+     <script>
+    
+    
+// Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+
+  </script>
+      <script>
+        function toggleDetails() {
+            const details = document.querySelector('.details');
+            details.classList.toggle('hidden');
+        }
+            </script>
+    <script>
+       let currentIndices = {
+           
+            'piercing-gallery': 1,
+           
+        };
+
+        function showImage(galleryId, index) {
+            const galleryContainer = document.getElementById(galleryId);
+            const gallery = galleryContainer.querySelector('.gallery');
+            const images = galleryContainer.querySelectorAll('.gallery-image');
+            if (index >= images.length) {
+                currentIndices[galleryId] = 0;
+            } else if (index < 0) {
+                currentIndices[galleryId] = images.length - 1;
+            } else {
+                currentIndices[galleryId] = index;
+            }
+
+            const offset = -(currentIndices[galleryId] - 1) * (100 / 3); 
+            gallery.style.transform = `translateX(${offset}%)`;
+
+            images.forEach((img, i) => {
+                if (i === currentIndices[galleryId]) {
+                    img.style.transform = 'scale(1.2)';
+                    img.style.opacity = '1';
+                } else {
+                    img.style.transform = 'scale(1)';
+                    img.style.opacity = '0.5';
+                }
+            });
+        }
+
+        function nextImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] + 1);
+        }
+
+        function prevImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] - 1);
+        }
+
+        // Функция для открытия модального окна
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('myModal').style.display = "flex";
+        }
+
+        // Функция для закрытия модального окна
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+
+        // Показываем начальные изображения
+        showImage('piercing-gallery', currentIndices['piercing-gallery']);
+        
+        
+        
+        
+
+
+
+
+    </script>
+</body> 
+</html>   

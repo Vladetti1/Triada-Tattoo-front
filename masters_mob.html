@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастера - Студия TRIADA</title>
+     <link rel="stylesheet" href="masters_mob.css">
+    </head>
+<body>
+    <script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("masters.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "masters.html";
+            } else if (width <= 1024 && window.location.href.indexOf("masters_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "masters_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+     <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+ <!-- <img src="help.PNG" style="z-index: -100;" alt="Описание изображения" class="fixed-image">-->
+
+    <div class="content">
+        <!-- Мастера -->
+        <div style="display:flex; justify-content: center;">
+        
+        <div id="vladislav" class="master">
+            <img src="images/vlad.webp" alt="Владислав">
+            <div>
+                <h3 style="color: gray; font-size: 36px; text-align: center; margin-bottom: 20px;margin-left: 0%;margin-top: 0%">Старший мастер Владислав</h3>
+                <p style="color: gray;margin-left: 14%;">Это Владислав, старший мастер студии TRIADA, с опытом работы более 15 лет. Реализует<br> работу любой сложности с завораживающим сюжетом.</p>
+               
+                    <p style="color: gray; text-align: center; margin-top: -2%;padding-bottom: 20px;">-Графика</p>
+                    <p style="color: gray; text-align: center;margin-top: -2%;padding-bottom: 20px;">-Перекрытия</p>
+                    <p style="color: gray; text-align: center;margin-top: -2%;padding-bottom: 20px;">-Масштабные проекты с нуля</p>
+                
+               <div style="display: flex; justify-content: center;">
+                <button style="display: flex; justify-content: center;"  class="glow-on-hover" onclick="togglePortfolio('tattoo-gallery')">Портфолио</button>
+                   </div>
+            </div>
+        </div>
+  </div>
+           <div class="gallery-container portfolio" id="tattoo-gallery" >
+
+        <div class="gallery">
+            <img src="images/vlad1.webp" class="gallery-image" alt="Tattoo 1" onclick="openModal('images/vlad1.webp')">
+            <img src="images/vlad2.webp" class="gallery-image" alt="Tattoo 2" onclick="openModal('images/vlad2.webp')">
+            <img src="images/vlad3.webp" class="gallery-image" alt="Tattoo 3" onclick="openModal('images/vlad3.webp')">
+ <img src="images/vlad4.webp" class="gallery-image" alt="Tattoo 4" onclick="openModal('images/vlad4.webp')">
+            <img src="images/vlad5.webp" class="gallery-image" alt="Tattoo 5" onclick="openModal('images/vlad5.webp')">
+            <img src="images/vlad6.webp" class="gallery-image" alt="Tattoo 6" onclick="openModal('images/vlad6.webp')">
+             <img src="images/vlad7.webp" class="gallery-image" alt="Tattoo 7" onclick="openModal('images/vlad7.webp')">
+        </div>
+        <img src="images/arrow.webp" class=" left-arrow" onclick="prevImage('tattoo-gallery')">
+        <img src="images/arrow.webp" class=" right-arrow" onclick="nextImage('tattoo-gallery')">
+    </div>
+  <div style="display:flex; justify-content: center;">
+      <div id="anastasia" class="master">
+            <img src="images/anastasia.webp" alt="Анастасия" style="margin-left: 5%; margin-top: 1%;width:90%;" >
+            
+                <h3 style="color: gray;  font-size: 35px;  margin-bottom: -20px;text-align: center;">Мастер Анастасия</h3>
+                <p style="color: gray;  font-size:22px;margin-bottom: -15px;">Это Анастасия, мастер студии TRIADA. Работает в студии 3 года. Реализует как маленькие тату, так и  большие проекты.К ней приходят со словами: «Мне Вас посоветовали!»</p>
+             
+                
+                    <p style="color: gray; font-size:22px;margin-bottom: -20px;text-align: center;">-Графика</p>
+                    <p style="color: gray;font-size:22px; margin-bottom: -20px;text-align: center;">-Перекрытия</p>
+                    <p style="color: gray; font-size:22px;margin-bottom: -20px;text-align: center;">-Цветные тату</p>
+                    <p style="color: gray; font-size:22px;margin-bottom: 10px;text-align: center;">-Перманентный макияж</p>
+                <div style="display: flex; justify-content: center;">
+                <button  style=" margin-bottom: 3%;text-align: center;"class="glow-on-hover" onclick="togglePortfolio('piercing-gallery')">Портфолио</button>
+                     </div>
+          </div>
+            </div>
+        </div>
+
+         <div class="gallery-container portfolio" id="piercing-gallery" >
+
+        <div class="gallery">
+               <img src="images/anastasiawork1.webp"  class="gallery-image"  alt="Анастасия Работа 1" onclick="openModal('images/anastasiawork1.webp')">
+                <img src="images/anastasiawork2.webp" class="gallery-image"  alt="Анастасия Работа 2" onclick="openModal('images/anastasiawork2.webp')">
+                <img src="images/anastasiawork3.webp" class="gallery-image"  alt="Анастасия Работа 3" onclick="openModal('images/anastasiawork3.webp')">
+                <img src="images/anastasiawork4.webp" class="gallery-image"  alt="Анастасия Работа 4" onclick="openModal('images/anastasiawork4.webp')">
+                <img src="images/anastasiawork5.webp" class="gallery-image"  alt="Анастасия Работа 5" onclick="openModal('images/anastasiawork5.webp')">
+                <img src="images/anastasiawork6.webp" class="gallery-image"  alt="Анастасия Работа 6" onclick="openModal('images/anastasiawork6.webp')">
+            </div>
+       <img src="images/arrow.webp" class=" left-arrow1" onclick="prevImage('piercing-gallery')">
+        <img src="images/arrow.webp" class=" right-arrow1" onclick="nextImage('piercing-gallery')">
+        </div>
+<div class="content"style="margin-top: -1%;" >
+      <div style="display:flex; justify-content: center;">
+        <div id="irina" class="master1">
+            <img src="images/irina.webp" alt="Ирина" style="margin-top: 2%; margin-left: 5%;width:90%;">
+            
+                <h3 style="color: gray; font-size: 33px;   margin-bottom: 7px; margin-top: -5%;text-align: center; ">Мастер Ирина</h3>
+                <p style="color: gray; font-size: 22px; text-align: center;">Это Ирина, мастер студии TRIADA. Работает в студии 5 лет. Она безупречно сделает любую татуировку. Ее сильные стороны — это тонкие линии и идеальные шрифты.</p>
+               
+            
+                    <p style="color: gray; font-size: 22px;text-align: center; margin-top: -4%;">-Графика</p>
+                    <p style="color: gray; font-size: 22px;text-align: center;margin-top: -4%;">-Перекрытия</p>
+                     <p style="color: gray; font-size: 22px;text-align: center;margin-top: -4%;">-Цветные тату</p>
+                     <p style="color: gray; font-size: 22px;text-align: center;margin-top: -4%;">-Перманентный макияж</p>
+            <div style="display: flex; justify-content: center;">
+                <button style=" margin-bottom: 3%;" class="glow-on-hover" onclick="togglePortfolio('makeup-gallery')">Портфолио</button>
+                 </div>
+            </div>
+        </div>
+
+      <div class="gallery-container portfolio" id="makeup-gallery" >
+
+        <div class="gallery">
+                <img src="images/ir1.webp"  class="gallery-image"  alt="Ирина Работа 1" onclick="openModal('images/ir1.webp')">
+                <img src="images/ir2.webp"  class="gallery-image"  alt="Ирина Работа 2" onclick="openModal('images/ir2.webp')">
+                <img src="images/ir3.webp" class="gallery-image"  alt="Ирина Работа 3" onclick="openModal('images/ir3.webp')">
+                <img src="images/ir4.webp" class="gallery-image"  alt="Ирина Работа 4" onclick="openModal('images/ir4.webp')">
+                <img src="images/ir5.webp" class="gallery-image"  alt="Ирина Работа 5" onclick="openModal('images/ir5.webp')">
+                <img src="images/ir6.webp" class="gallery-image"  alt="Ирина Работа 6" onclick="openModal('images/ir6.webp')">
+                <img src="images/ir7.webp" class="gallery-image"  alt="Ирина Работа 7" onclick="openModal('images/ir7.webp')">
+            </div>
+     <img src="images/arrow.webp" class="arrow left-arrow" onclick="prevImage('makeup-gallery')">
+        <img src="images/arrow.webp" class="arrow right-arrow" onclick="nextImage('makeup-gallery')">
+        </div>
+<div class="content"style="margin-top: -1%;" >
+    <div style="display:flex; justify-content: center;">
+                <div id="alena" class="master2">
+            <img src="images/alena.webp" alt="Алена" style="margin-top: 1%; margin-left: 5%;width:90%;margin-bottom: 6%;">
+           
+                <h3 style="color: gray; font-size: 33px; margin-bottom: -7%; margin-top: -10%;text-align: center; ">Мастер Алена</h3>
+                <p style="color: gray; font-size: 22px;text-align: center;">Это Алена, мастер студии TRIADA с опытом работы 4 года. Ее усидчивости и   аккуратности можно позавидовать. Алена также мастер по пирсингу в нашей студии.
+                 Она быстро и качественно сделает Вам прокол любой сложности.</p>
+          
+                
+                    <p style="color: gray; font-size: 22px;text-align: center; margin-top:-7%;">-Графика</p>
+                    <p style="color: gray; font-size: 22px;text-align: center;margin-top:-7%;">-Пирсинг</p>
+             <div style="display: flex; justify-content: center;">
+                <button style=" margin-bottom: 8%;" class="glow-on-hover" onclick="togglePortfolio('3gallery')">Портфолио</button>
+         </div>
+           </div>
+        </div>
+
+   <div class="gallery-container portfolio" id="3gallery" >
+
+        <div class="gallery">
+              <img src="images/al1.webp"  class="gallery-image" alt="Алена Работа 1" onclick="openModal('images/al1.webp')">
+                <img src="images/al2.webp"  class="gallery-image" alt="Алена Работа 2" onclick="openModal('images/al2.webp')">
+                <img src="images/al3.webp"  class="gallery-image" alt="Алена Работа 3" onclick="openModal('images/al3.webp')">
+                <img src="images/al4.webp"  class="gallery-image" alt="Алена Работа 4" onclick="openModal('images/al4.webp')">
+                <img src="images/al5.webp"  class="gallery-image" alt="Алена Работа 5" onclick="openModal('images/al5.webp')">
+                <img src="images/al6.webp"  class="gallery-image" alt="Алена Работа 6" onclick="openModal('images/al6.webp')">
+                <img src="images/al7.webp"  class="gallery-image" alt="Алена Работа 7" onclick="openModal('images/al7.webp')">
+            </div>
+             <img src="images/arrow.webp" class="arrow left-arrow" onclick="prevImage('3gallery')" >
+        <img src="images/arrow.webp" class="arrow right-arrow" onclick="nextImage('3gallery')" >
+        </div>
+        
+
+        
+   
+
+ <!-- Модальное окно -->
+<!--
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Увеличенное изображение">
+        </div>
+    </div>
+-->
+        <script>function togglePortfolio(galleryId) {
+            const portfolio = document.getElementById(galleryId);
+            portfolio.style.display = portfolio.style.display === "block" ? "none" : "block";
+        }
+ 
+</script>
+
+    <script>
+
+// Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+
+
+    </script>
+    
+     <script>
+        let currentIndices = {
+              'tattoo-gallery': 0,
+            'piercing-gallery': 0,
+            'makeup-gallery': 0,
+        '3gallery': 0 
+        };
+
+        function showImage(galleryId, index) {
+    const galleryContainer = document.getElementById(galleryId);
+    const images = galleryContainer.querySelectorAll('.gallery-image');
+    currentIndices[galleryId] = index >= images.length ? 0 : (index < 0 ? images.length - 1 : index);
+
+    images.forEach((img, i) => {
+        if (i === currentIndices[galleryId]) {
+            img.style.display = 'block'; // Показываем текущее изображение
+            img.style.transform = 'scale(1.2)';
+            img.style.opacity = '1';
+        } else {
+            img.style.display = 'none'; // Скрываем остальные изображения
+            img.style.transform = 'scale(1)';
+            img.style.opacity = '0.5';
+        }
+    });
+}
+
+        function nextImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] + 1);
+        }
+
+        function prevImage(galleryId) {
+            showImage(galleryId, currentIndices[galleryId] - 1);
+        }
+
+
+
+        // Показываем начальные изображения
+        showImage('tattoo-gallery', currentIndices['tattoo-gallery']);
+         showImage('piercing-gallery', currentIndices['piercing-gallery']);
+        showImage('makeup-gallery', currentIndices['makeup-gallery']);
+        showImage('3gallery', currentIndices['3gallery']);
+   </script>
+    
+    
+    
+    
+</body>
+</html>

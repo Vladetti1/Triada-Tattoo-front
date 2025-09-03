@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Консультация - Студия TRIADA</title>
+      <link rel="stylesheet" href="consultation.css">
+
+</head>
+<body>
+<script>
+        function checkScreenSize() {
+            var width = window.innerWidth;
+
+            if (width > 1024 && window.location.href.indexOf("consultation.html") === -1) {
+                // Если ширина больше 1024 и мы не на странице для больших экранов
+                window.location.href = "consultation.html";
+            } else if (width <= 1024 && window.location.href.indexOf("consultation_mob.html") === -1) {
+                // Если ширина меньше или равна 1024 и мы не на мобильной версии
+                window.location.href = "consultation_mob.html";
+            }
+        }
+
+        window.onload = checkScreenSize;
+
+        // Проверка при изменении размера окна
+        window.onresize = function() {
+            // Обновляем только при значительном изменении ширины
+            var newWidth = window.innerWidth;
+            var currentWidth = window.oldWidth || newWidth;
+
+            if (Math.abs(newWidth - currentWidth) > 50) {  // Обновляем только если изменилось более чем на 50px
+                checkScreenSize();
+            }
+            window.oldWidth = newWidth;
+        };
+    </script>
+<!--
+<div class="spot" id="spot1">
+    <img src="images/spot12.webp" alt="Пятно 1">
+</div>
+
+<div class="spot" id="spot2">
+    <img src="images/spot13.webp" alt="Пятно 2">
+</div>
+
+<div class="spot" id="spot3">
+    <img src="images/spot14.webp" alt="Пятно 3">
+</div>
+
+<div class="spot" id="spot4">
+    <img src="images/spot15.webp" alt="Пятно 4">
+</div>
+
+
+<div class="smoke-background"></div>
+
+ <div class="smoke_img">
+<img src="images/smoke5.webp">
+</div>
+-->
+    <div class="header" id="header">
+        <img src="images/logo.webp" alt="TRIADA Logo" class="logo-img">
+        <div class="contacts">
+            <div class="dropdown">
+                <span>Контакты</span>
+                <div class="dropdown-content">
+                    <a href="tel:+79029248099" class="tel">8(902) 924-80-99</a>
+                    <a href="https://www.instagram.com/triada_tattoo?igsh=bjU2Ym5obTR3MWFj" target="_blank">Inst</a>
+                    <a href="https://t.me/Triada_tattoo_studio" target="_blank">Tg</a>
+                    <a href="https://vk.com/triada__tattoo" target="_blank">VK</a>
+                </div>
+            </div>
+            <div class="adress">
+                <a href="https://yandex.ru/maps/62/krasnoyarsk/house/novomlinskaya_ulitsa_15/bUsYcQBkSEQEQFtsfXxwdHRqbA==" target="_blank">Адрес</a>
+            </div>
+            <div class="zap">
+                <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20сеанс">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+    <p style="font-size: 24px; text-align: center; margin-left: 20px; margin-bottom: 30px; color: gray;">Если Вы еще не определились с эскизом или местом нанесения<br> будущей тату,то наши мастера с радостью Вам помогут!</p>
+<p style="font-size: 24px; text-align: center; margin-left: 20px; margin-bottom: 70px; color: gray;">У нас есть услуга бесплатной консультации, куда входят<br> консультирование Вас по всем вопросам,разработка <br>индивидуального эскиза и примерка изображения на тело </p>
+     
+    </div>
+<!-- <div class="large-text">Consultation</div>-->
+  <div class="cons_img1">
+<img src="images/cons11.webp">
+</div>
+<div class="cons_img2">
+<img src="images/cons22.webp">
+</div>
+    <div class="menu">
+        <a href="https://wa.me/+79029248099?text=Здравствуйте!%20Я%20хочу%20записаться%20на%20консультацию%20в%20студии%20TRIADA!" class="button">Записаться на консультацию</a>
+    </div>
+
+    <script>
+        // Показать и скрыть выпадающее меню с задержкой
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        let timer;
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500); // Задержка перед скрытием в миллисекундах
+        });
+
+        dropdownContent.addEventListener('mouseenter', () => {
+            clearTimeout(timer);
+        });
+
+        dropdownContent.addEventListener('mouseleave', () => {
+            timer = setTimeout(() => {
+                dropdownContent.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
